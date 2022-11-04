@@ -16,7 +16,7 @@ namespace GenderReveal
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
+            bundles.Add(new StyleBundle("~/Content/styles").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
