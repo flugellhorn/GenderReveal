@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\aszle\Documents\ProjectDeployments\GenderReveal</_PublishTargetUrl>
-    <History>True|2022-11-04T20:28:48.2852387Z;</History>
+    <_PublishTargetUrl>C:\Projects\GenderReveal\GenderReveal\deploy</_PublishTargetUrl>
+    <History>True|2022-11-04T20:42:16.4480151Z;True|2022-11-04T15:28:48.2852387-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,10 +15,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/GenderReveal.dll">
-      <publishTime>11/04/2022 15:28:42</publishTime>
+      <publishTime>11/04/2022 15:42:12</publishTime>
     </File>
     <File Include="bin/GenderReveal.pdb">
-      <publishTime>11/04/2022 15:28:42</publishTime>
+      <publishTime>11/04/2022 15:42:12</publishTime>
     </File>
     <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
       <publishTime>10/22/2021 18:42:08</publishTime>
