@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenderReveal", "GenderReveal.csproj", "{FC554130-C958-4FBC-B64F-BFE2AFC726ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC554130-C958-4FBC-B64F-BFE2AFC726ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC554130-C958-4FBC-B64F-BFE2AFC726ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC554130-C958-4FBC-B64F-BFE2AFC726ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC554130-C958-4FBC-B64F-BFE2AFC726ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {41049AE2-D4D0-4FA3-AC00-82CFE683A3D4}
+	EndGlobalSection
+EndGlobal
