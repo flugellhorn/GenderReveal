@@ -139,8 +139,7 @@
 
         $(".vote-btn").click(function () {
             var isBoy = $(this).data("vote-ndx") === 0;
-            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {
-                debugger;
+            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {                
                 barChart.data.datasets[0].data[0] = data.data[0].Value;
                 barChart.data.datasets[0].data[1] = data.data[1].Value;
                 barChart.update();
