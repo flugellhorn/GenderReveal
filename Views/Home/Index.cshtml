@@ -94,9 +94,10 @@
                 $("#overlay").hide();
             }
 
-            $(".prompt[data-step=" + currentStep + "]").fadeOut(function () {
+            $(".prompt[data-step=" + currentStep + "]").fadeOut(function () {                
                 currentStep = currentStep + 1;
                 $(".prompt[data-step=" + currentStep + "]").fadeIn(fade);
+                window.scrollTo(0, document.body.scrollHeight);
                 $(".prompt[data-step=" + currentStep + "]>.next-arrow i").delay(3000).fadeIn(1000);
             });
         }
