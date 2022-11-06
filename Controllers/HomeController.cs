@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Web;
 using System.Web.Mvc;
 
@@ -20,6 +18,7 @@ namespace GenderReveal.Controllers
         {
             public string Gender { get; set; }
             public int Value { get; set; }
+            public string Color { get; set; }
         }
 
         [HttpGet]
@@ -46,17 +45,16 @@ namespace GenderReveal.Controllers
             }
             if (isBoy)
             {
-                items.First(x => x.Gender == "boy").Value = items.First(x => x.Gender == "boy").Value + 1;
+                items.First(x => x.Gender == "Boy").Value = items.First(x => x.Gender == "Boy").Value + 1;
             }
             else
             {
-                items.First(x => x.Gender == "girl").Value = items.First(x => x.Gender == "girl").Value + 1;
+                items.First(x => x.Gender == "Girl").Value = items.First(x => x.Gender == "Girl").Value + 1;
             }
 
             using (StreamWriter file = new StreamWriter(Server.MapPath("/data/poll.json")))
             {
-                JsonSerializer serializer = new JsonSerializer();
-                //serialize object directly into file stream
+                JsonSerializer serializer = new JsonSerializer();                
                 serializer.Serialize(file, items, typeof(List<GenderItem>));
             }
 

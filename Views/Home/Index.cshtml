@@ -18,11 +18,14 @@
         <div id="vote-container">
             <button class="vote-btn btn btn-primary btn-baby-blue" data-vote-ndx="0" id="boy-vote">Boy</button>
             <button class="vote-btn btn btn-primary" data-vote-ndx="1" id="girl-vote">Girl</button>
-            <p class="subheading fake-link">Skip To Poll</p>
+            <p id="skip-vote-link" class="subheading fake-link">Skip To Poll</p>
         </div>
     </div>
-    <div class="prompt" id="gender-poll-container" data-step="5">
-        <div id="gender-poll"></div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+    <div class="prompt" id="gender-poll-container" data-step="5">        
+        <div>
+            <canvas id="gender-poll"></canvas>
+        </div>
+        <div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="6">
         <div class="prompt-text">Well, the wait is finally over...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
@@ -43,7 +46,15 @@
         <div class="prompt-text">Okay, got it, BABY DZIADEK IS A</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="12">
-        <div><img class="img-full-window-overlay" src="~/Content/assets/img/error.png"/></div><div class="next-arrow error-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div id="overlay">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">ERROR: 0x034930</h5>
+                    <p class="card-text">An unexpected error has occured. If the problem persists please contact support and provider the following code: 0x034930</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-arrow error-arrow"><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="13">
         <div class="prompt-text">Sorry, sorry give us a second...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
@@ -61,8 +72,9 @@
         <div class="prompt-text">THE BIG REVEAL!!!!</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="18">
+        <h2 class="fancy big-text mb-4">IT'S A BOY</h2>
         <img class="ultrasound-img" src="~/Content/assets/img/ultrasound.jpg" alt="duh his name if Dziadek, a girl named Dziadek wtf?" />
-        <div>We hope you are just as excited as we are for our bouncing baby boy!</div>
+        <div class="prompt-text">We hope you are just as excited as we are for our bouncing baby boy!</div>
     </div>
 
 </div>
@@ -70,52 +82,9 @@
 <script>
     $(function () {
         var currentStep = 0;
-        $("#gender-poll").kendoChart({
-            dataSource: {
-                transport: {
-                    read: {
-                        url: "../data/poll.json",
-                        dataType: "json",
-                        cache: false
-                    }
-                }
-            },
-            theme: "Material",
-            chartArea: { background: "transparent", height: 300 },
-            legend: {
-                position: "top"
-            },
-            series: [{
-                field: "Value",
-                categoryField: "Gender",
-                padding: 0
-            }],
-            tooltip: {
-                visible: true,
-                template: "<div class='text-white'>#= category # - #= kendo.format('{0:P}', percentage) #</div>"
-            },
-            seriesDefaults: {
-                type: "pie"
-            },
-            seriesColors: ["#8FA8B8", "#DA7871"],
-        });
+        var barChart = null;
 
-        $(".vote-btn").click(function () {
-            var isBoy = $(this).data("vote-ndx") === 0;
-            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {
-                $("#gender-poll").data("kendoChart").setDataSource(data);
-                $(".prompt[data-step=" + currentStep + "]").fadeOut(function () {
-                    currentStep = currentStep + 1;
-                    $(".prompt[data-step=" + currentStep + "]").fadeIn(1000);
-                    $(".prompt[data-step=" + currentStep + "]>.next-arrow").delay(3000).fadeIn(1000);
-                });
-            });
-        });
-
-        $(".prompt[data-step=0]").fadeIn(1000);
-        $(".prompt[data-step=0]>.next-arrow").delay(3000).fadeIn(1000);
-
-        $(".next-arrow").click(function () {
+        function nextStep() {
             var fade = 1000;
             if (currentStep + 1 === 12) {
                 fade = 0;
@@ -126,14 +95,78 @@
                 $(".prompt[data-step=" + currentStep + "]").fadeIn(fade);
                 $(".prompt[data-step=" + currentStep + "]>.next-arrow").delay(3000).fadeIn(1000);
             });
+        }
+
+        $.get("@Url.Action("GetPollResults", "Home")").done(function (response) {            
+            var results = [];
+            results.push(response.data[0].Value);
+            results.push(response.data[1].Value);
+            const data = {
+                labels: ["Boy", "Girl"],
+                datasets: [{
+                    backgroundColor: ["#566F7F", "#DA7871"], 
+                    hoverBackgroundColor: ["#445d6d","#bb524b"],
+                    barPercentage: 0.9,
+                    data: results,
+
+                }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: 20
+                            }
+                        }]
+                    },
+                    responsive: true
+                }
+            };
+
+            barChart = new Chart(
+                document.getElementById('gender-poll'),
+                config
+            );
         });
 
-        setInterval(function () {            
+        $(".vote-btn").click(function () {
+            var isBoy = $(this).data("vote-ndx") === 0;
+            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {
+                debugger;
+                barChart.data.datasets[0].data[0] = data.data[0].Value;
+                barChart.data.datasets[0].data[1] = data.data[1].Value;
+                barChart.update();
+                nextStep();
+            });
+        });
+
+        $(".prompt[data-step=0]").fadeIn(1000);
+        $(".prompt[data-step=0]>.next-arrow").delay(3000).fadeIn(1000);
+
+        $(".next-arrow").click(function () {
+            nextStep();
+        });
+
+        $("#skip-vote-link").click(function () {
+            nextStep();
+        });
+
+        setInterval(function () {
             var text = $("#boy-girl-glitch-text").attr("data-text");
             var content = $("#boy-girl-glitch-text").text();
             $("#boy-girl-glitch-text").text(text);
-            $("#boy-girl-glitch-text").attr("data-text", content);           
+            $("#boy-girl-glitch-text").attr("data-text", content);
         }, 2000);
-       
+
     });
 </script>

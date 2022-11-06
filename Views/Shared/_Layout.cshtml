@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
@@ -13,8 +13,6 @@
     <link href="~/Content/css/styles.css" rel="stylesheet" />
     @Styles.Render("~/Content/styles")
     @Scripts.Render("~/bundles/modernizr")
-    <link href="~/Content/kendo/2022.2.802/kendo.common.min.css" rel="stylesheet" />
-    <link href="~/Content/kendo/2022.2.802/kendo.flat.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
             integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
             crossorigin="anonymous"></script>
@@ -26,10 +24,10 @@
         <div class="container position-relative px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    @*<div class="site-heading">
-                            <h1>Baby Dziadek</h1>
-                            <span class="subheading">Due April 2023</span>
-                        </div>*@
+                    <div class="site-heading">
+                            <h1 class="fancy biggest-text mb-4">Baby Dziadek</h1>
+                            <span class="big-text">Due April 2023</span>
+                        </div>
                 </div>
             </div>
         </div>
@@ -45,7 +43,7 @@
 
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/glitch.jquery.js"></script>
-    <script src="~/Content/js/scripts.js"></script>
-    <script src="~/Scripts/kendo/2022.2.802/kendo.all.min.js"></script>
+    <script src="~/Content/js/scripts.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
