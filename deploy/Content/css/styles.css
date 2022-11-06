@@ -11120,8 +11120,8 @@ footer {
 header.masthead {
   position: relative;
   margin-bottom: 3rem;
-  padding-top: calc(10rem + 57px);
-  padding-bottom: 10rem;
+  padding-top: calc(8rem + 57px);
+  padding-bottom: 8rem;
   background: no-repeat center center;
   background-color: #6c757d;
   background-size: cover;
@@ -11185,8 +11185,8 @@ header.masthead .post-heading .meta a {
 }
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    padding-top: 18rem;
+    padding-bottom: 18rem;
   }
   header.masthead .page-heading h1, header.masthead .page-heading .h1,
 header.masthead .site-heading h1,

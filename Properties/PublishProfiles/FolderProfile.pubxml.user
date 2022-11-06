@@ -5,7 +5,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <_PublishTargetUrl>C:\Projects\GenderReveal\GenderReveal\deploy</_PublishTargetUrl>
-    <History>True|2022-11-04T21:21:19.3091932Z;True|2022-11-04T16:01:07.8414809-05:00;True|2022-11-04T16:00:39.5740878-05:00;True|2022-11-04T15:58:21.8359287-05:00;True|2022-11-04T15:57:56.6999814-05:00;True|2022-11-04T15:42:16.4480151-05:00;True|2022-11-04T15:28:48.2852387-05:00;</History>
+    <History>True|2022-11-06T01:53:57.2348445Z;True|2022-11-04T16:21:19.3091932-05:00;True|2022-11-04T16:01:07.8414809-05:00;True|2022-11-04T16:00:39.5740878-05:00;True|2022-11-04T15:58:21.8359287-05:00;True|2022-11-04T15:57:56.6999814-05:00;True|2022-11-04T15:42:16.4480151-05:00;True|2022-11-04T15:28:48.2852387-05:00;</History>
   </PropertyGroup>
   <ItemGroup>
     <File Include="bin/Antlr3.Runtime.dll">
@@ -15,16 +15,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>09/10/2013 16:29:20</publishTime>
     </File>
     <File Include="bin/App_global.asax.compiled">
-      <publishTime>11/04/2022 16:21:13</publishTime>
+      <publishTime>11/05/2022 20:53:56</publishTime>
     </File>
     <File Include="bin/App_global.asax.dll">
-      <publishTime>11/04/2022 16:21:13</publishTime>
+      <publishTime>11/05/2022 20:53:56</publishTime>
     </File>
     <File Include="bin/GenderReveal.dll">
-      <publishTime>11/04/2022 16:21:09</publishTime>
+      <publishTime>11/05/2022 20:53:52</publishTime>
     </File>
     <File Include="bin/GenderReveal.pdb">
-      <publishTime>11/04/2022 16:21:09</publishTime>
+      <publishTime>11/05/2022 20:53:52</publishTime>
     </File>
     <File Include="bin/Microsoft.Bcl.AsyncInterfaces.dll">
       <publishTime>10/22/2021 18:42:08</publishTime>
@@ -357,10 +357,19 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2022 20:00:03</publishTime>
     </File>
     <File Include="Content/css/styles.css">
-      <publishTime>11/04/2022 12:05:56</publishTime>
+      <publishTime>11/05/2022 19:59:52</publishTime>
+    </File>
+    <File Include="Content/fonts/GlacialIndifference-Bold.otf">
+      <publishTime>11/04/2022 21:22:02</publishTime>
+    </File>
+    <File Include="Content/fonts/GlacialIndifference-Regular.otf">
+      <publishTime>11/04/2022 21:22:02</publishTime>
     </File>
     <File Include="Content/fonts/Hacked-KerX.ttf">
       <publishTime>11/04/2022 13:17:24</publishTime>
+    </File>
+    <File Include="Content/fonts/Hathem Bosteem.ttf">
+      <publishTime>11/04/2022 21:21:59</publishTime>
     </File>
     <File Include="Content/js/scripts.js">
       <publishTime>11/04/2022 12:19:31</publishTime>
@@ -1824,10 +1833,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/30/2022 19:41:20</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>11/04/2022 13:22:03</publishTime>
+      <publishTime>11/05/2022 20:47:28</publishTime>
     </File>
     <File Include="data/poll.json">
-      <publishTime>11/04/2022 13:22:26</publishTime>
+      <publishTime>11/05/2022 20:48:55</publishTime>
     </File>
     <File Include="favicon.ico">
       <publishTime>11/02/2022 15:31:17</publishTime>
@@ -1836,7 +1845,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2022 15:31:17</publishTime>
     </File>
     <File Include="PrecompiledApp.config">
-      <publishTime>11/04/2022 16:21:11</publishTime>
+      <publishTime>11/05/2022 20:53:53</publishTime>
     </File>
     <File Include="Scripts/bootstrap.bundle.js">
       <publishTime>11/02/2022 20:00:03</publishTime>
@@ -8712,13 +8721,13 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/02/2022 15:31:19</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/04/2022 13:19:45</publishTime>
+      <publishTime>11/05/2022 20:50:24</publishTime>
     </File>
     <File Include="Views/Shared/Error.cshtml">
       <publishTime>11/02/2022 15:31:17</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/04/2022 16:21:00</publishTime>
+      <publishTime>11/05/2022 20:02:48</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/02/2022 15:31:17</publishTime>

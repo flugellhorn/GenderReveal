@@ -3,66 +3,78 @@
 }
 <div id="gender-reveal-main-container">
     <div class="prompt" data-step="0">
-        <div class="prompt-text">Patrick and Stacy are excited to announce...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Patrick and Stacy are excited to announce...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="1">
-        <div class="prompt-text">Baby Dziadek's gender...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Baby Dziadek's gender...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="2">
-        <div class="prompt-text">But first...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">But first...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="3">
-        <div class="prompt-text"> What do you think we're having?</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text"> What do you think we're having?</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="4">
         <div id="vote-container">
             <button class="vote-btn btn btn-primary btn-baby-blue" data-vote-ndx="0" id="boy-vote">Boy</button>
             <button class="vote-btn btn btn-primary" data-vote-ndx="1" id="girl-vote">Girl</button>
-            <p class="subheading fake-link">Skip To Poll</p>
+            <p id="skip-vote-link" class="subheading fake-link">Skip To Poll</p>
         </div>
     </div>
-    <div class="prompt" id="gender-poll-container" data-step="5">
-        <div id="gender-poll"></div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+    <div class="prompt" id="gender-poll-container" data-step="5">        
+        <div style="max-height:300px">
+            <canvas id="gender-poll"></canvas>
+        </div>
+        <div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="6">
-        <div class="prompt-text">Well, the wait is finally over...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Well, the wait is finally over...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="7">
-        <div class="prompt-text">We are having a...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">We are having a...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="8">
-        <div id="boy-girl-glitch-text" class="glitch prompt-text glitch-font" data-text="Boy">Girl</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div id="boy-girl-glitch-text" class="glitch prompt-text glitch-font" data-text="Boy">Girl</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="9">
-        <div class="prompt-text">Wait...that's not right</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Wait...that's not right</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="10">
-        <div class="prompt-text">Hold on we are having technical difficulties</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Hold on we are having technical difficulties</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="11">
-        <div class="prompt-text">Okay, got it, BABY DZIADEK IS A</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Okay, got it, BABY DZIADEK IS A</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="12">
-        <div><img class="img-full-window-overlay" src="~/Content/assets/img/error.png"/></div><div class="next-arrow error-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div id="overlay">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">ERROR: 0x034930</h5>
+                    <p class="card-text">An unexpected error has occured. If the problem persists please contact support and provider the following code: 0x034930</p>
+                </div>
+            </div>
+        </div>
+        <div class="next-arrow error-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="13">
-        <div class="prompt-text">Sorry, sorry give us a second...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Sorry, sorry give us a second...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="14">
-        <div class="prompt-text">Just hang in there</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Just hang in there</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="15">
-        <div class="prompt-text">Be patient almost have it fixed...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">Be patient almost have it fixed...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="16">
-        <div class="prompt-text">OK almost time for...</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">OK almost time for...</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="17">
-        <div class="prompt-text">THE BIG REVEAL!!!!</div><div class="next-arrow"><i class="bi bi-arrow-right"></i></div>
+        <div class="prompt-text">THE BIG REVEAL!!!!</div><div class="next-arrow" data-unclicked><i class="bi bi-arrow-right"></i></div>
     </div>
     <div class="prompt" data-step="18">
+        <h2 class="fancy big-text no-shadow mb-4">IT'S A BOY</h2>
         <img class="ultrasound-img" src="~/Content/assets/img/ultrasound.jpg" alt="duh his name if Dziadek, a girl named Dziadek wtf?" />
-        <div>We hope you are just as excited as we are for our bouncing baby boy!</div>
+        <div class="prompt-text mb-4">We hope you are just as excited as we are for our bouncing baby boy!</div>
     </div>
 
 </div>
@@ -70,70 +82,89 @@
 <script>
     $(function () {
         var currentStep = 0;
-        $("#gender-poll").kendoChart({
-            dataSource: {
-                transport: {
-                    read: {
-                        url: "../data/poll.json",
-                        dataType: "json",
-                        cache: false
-                    }
-                }
-            },
-            theme: "Material",
-            chartArea: { background: "transparent", height: 300 },
-            legend: {
-                position: "top"
-            },
-            series: [{
-                field: "Value",
-                categoryField: "Gender",
-                padding: 0
-            }],
-            tooltip: {
-                visible: true,
-                template: "<div class='text-white'>#= category # - #= kendo.format('{0:P}', percentage) #</div>"
-            },
-            seriesDefaults: {
-                type: "pie"
-            },
-            seriesColors: ["#8FA8B8", "#DA7871"],
-        });
+        var barChart = null;
 
-        $(".vote-btn").click(function () {
-            var isBoy = $(this).data("vote-ndx") === 0;
-            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {
-                $("#gender-poll").data("kendoChart").setDataSource(data);
-                $(".prompt[data-step=" + currentStep + "]").fadeOut(function () {
-                    currentStep = currentStep + 1;
-                    $(".prompt[data-step=" + currentStep + "]").fadeIn(1000);
-                    $(".prompt[data-step=" + currentStep + "]>.next-arrow").delay(3000).fadeIn(1000);
-                });
-            });
-        });
-
-        $(".prompt[data-step=0]").fadeIn(1000);
-        $(".prompt[data-step=0]>.next-arrow").delay(3000).fadeIn(1000);
-
-        $(".next-arrow").click(function () {
+        function nextStep() {            
             var fade = 1000;
             if (currentStep + 1 === 12) {
                 fade = 0;
+                $("#overlay").show();
+            }
+            if (currentStep + 1 === 13) {
+                $("#overlay").hide();
             }
 
             $(".prompt[data-step=" + currentStep + "]").fadeOut(function () {
                 currentStep = currentStep + 1;
                 $(".prompt[data-step=" + currentStep + "]").fadeIn(fade);
-                $(".prompt[data-step=" + currentStep + "]>.next-arrow").delay(3000).fadeIn(1000);
+                $(".prompt[data-step=" + currentStep + "]>.next-arrow i").delay(3000).fadeIn(1000);
+            });
+        }
+
+        $.get("@Url.Action("GetPollResults", "Home")").done(function (response) {            
+            var results = [];
+            results.push(response.data[0].Value);
+            results.push(response.data[1].Value);
+            const data = {
+                labels: ["Boy", "Girl"],
+                datasets: [{
+                    backgroundColor: ["#566F7F", "#DA7871"], 
+                    hoverBackgroundColor: ["#445d6d","#bb524b"],
+                    barPercentage: 0.9,
+                    data: results,
+
+                }]
+            };
+
+            const config = {
+                type: 'bar',
+                data: data,
+                options: {
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }
+            };
+
+            barChart = new Chart(
+                document.getElementById('gender-poll'),
+                config
+            );
+        });
+
+        $(".vote-btn").click(function () {
+            var isBoy = $(this).data("vote-ndx") === 0;
+            $.post("@Url.Action("SubmitVote", "Home")", { isBoy: isBoy }).done(function (data) {                
+                barChart.data.datasets[0].data[0] = data.data[0].Value;
+                barChart.data.datasets[0].data[1] = data.data[1].Value;
+                barChart.update();
+                nextStep();
             });
         });
 
-        setInterval(function () {            
+        $(".prompt[data-step=0]").fadeIn(1000);
+        $(".prompt[data-step=0]>.next-arrow i").delay(3000).fadeIn(1000);
+
+        $(".next-arrow[data-unclicked] i").click(function () {
+            $(this).removeAttr("data-unclicked");
+            nextStep();     
+        });
+
+        $("#skip-vote-link").click(function () {
+            nextStep();
+        });
+
+        setInterval(function () {
             var text = $("#boy-girl-glitch-text").attr("data-text");
             var content = $("#boy-girl-glitch-text").text();
             $("#boy-girl-glitch-text").text(text);
-            $("#boy-girl-glitch-text").attr("data-text", content);           
+            $("#boy-girl-glitch-text").attr("data-text", content);
         }, 2000);
-       
+
     });
 </script>
