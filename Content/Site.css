@@ -19,8 +19,8 @@
     src: url("fonts/Hathem Bosteem.ttf");
 }
 
-.fancy{
-    font-family:fancy;
+.fancy {
+    font-family: fancy;
 }
 
 .glitch-font {
@@ -42,6 +42,10 @@ body {
     font-size: 55px;
     font-weight: 700;
     text-shadow: 2px 2px rgba(0,0,0,0.5);
+}
+
+.no-shadow{
+    text-shadow:none;
 }
 
 p, div {
@@ -97,12 +101,16 @@ p, div {
     }
 
 .next-arrow {
-    display: none;
-    margin-left: 30px;
-    font-size: 50px;
-    font-weight: 700;
-    cursor: pointer;
+    min-height: 100px;
 }
+
+    .next-arrow i {
+        display: none;
+        margin-left: 30px;
+        font-size: 50px;
+        font-weight: 700;
+        cursor: pointer;
+    }
 
 .prompt {
     display: none;
@@ -127,25 +135,21 @@ p, div {
 }
 
 .error-arrow {
-    position: absolute;
-    z-index: 100000;
-    font-size: 150px !important;
-    top: 50%;
-    left: 50%;
+    z-index: 100;
+    color: white;
+    position:relative;
 }
 
-.vote-btn {
-    padding-left: 30px;
-    padding-right: 30px;
-    font-size: 40px;
-    margin: 25px;
-}
+    .error-arrow i{
+        font-size:80px;
+    }
 
-/*#gender-poll text {
-    font-family: glacial !important;
-    font-size: 18px !important;
-}*/
-
+    .vote-btn {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 40px;
+        margin: 25px;
+    }
 
 #overlay {
     position: fixed; /* Sit on top of the page content */
@@ -160,6 +164,10 @@ p, div {
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
 }
+
+    #overlay .card {
+        margin-top: 10%;
+    }
 
 /*Double text glitch effect*/
 .glitch {
